@@ -7,5 +7,5 @@ Symfony 4 -- API REST -- Docker
 #APACHE & PHP 7.4 
   http://127.0.0.1:8082/login
 
-#API   
+#API
   http://127.0.0.1:8082/ad
