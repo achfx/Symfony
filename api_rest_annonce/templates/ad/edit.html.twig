@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Ad{% endblock %}
+
+{% block body %}
+<br>
+{% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+{% endif %}
+    <h1>Edit Ad</h1>
+
+    {{ include('ad/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('ad_index') }}">back to list</a>
+
+    {{ include('ad/_delete_form.html.twig') }}
+{% endblock %}

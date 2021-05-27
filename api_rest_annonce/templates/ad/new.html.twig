@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Ad{% endblock %}
+
+{% block body %}
+<br>
+{% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+{% endif %}
+    <h1>Create new Ad</h1>
+
+    {{ include('ad/_form.html.twig') }}
+
+    <a href="{{ path('ad_index') }}">back to list</a>
+{% endblock %}
